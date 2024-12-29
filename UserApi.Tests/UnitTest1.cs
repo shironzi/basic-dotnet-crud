@@ -12,4 +12,14 @@ public class BasicTests : IClassFixture<WebApplicationFactory<Program>>
     {
         _factory = factory;
     }
+
+    [Fact]
+    public async Task getAllUsers_ReturnOkResult()
+    {
+        HttpClient client = _factory.CreateClient();
+
+        var response = await client.GetAsync("/users");
+
+        response.EnsureSuccessStatusCode();
+    }
 }
