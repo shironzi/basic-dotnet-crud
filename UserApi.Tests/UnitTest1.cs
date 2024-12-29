@@ -1,10 +1,15 @@
-﻿namespace UserApi.Tests;
+﻿using Microsoft.AspNetCore.Mvc.Testing;
 
-public class UnitTest1
+
+namespace UserApi.Tests;
+
+public class BasicTests : IClassFixture<WebApplicationFactory<Program>>
 {
-    [Fact]
-    public void Test1()
-    {
 
+    private readonly WebApplicationFactory<Program> _factory;
+
+    public BasicTests(WebApplicationFactory<Program> factory)
+    {
+        _factory = factory;
     }
 }

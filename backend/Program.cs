@@ -26,3 +26,5 @@ app.MapGet("/users", () =>
 });
 
 app.Run();
+
+public partial class Program;
