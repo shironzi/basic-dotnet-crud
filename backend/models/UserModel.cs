@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-public class User : BaseEntityModel
+public sealed class User : BaseEntityModel
 {
 
     [StringLength(50)]
