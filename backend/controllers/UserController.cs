@@ -10,4 +10,9 @@ public class UserController : Controller
     {
         return Ok("users");
     }
+
+    public IActionResult CreateUser()
+    {
+        return Ok("user");
+    }
 }
