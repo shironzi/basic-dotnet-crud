@@ -1,8 +1,4 @@
-using AspireSQLEFCore;
-
 var builder = WebApplication.CreateBuilder(args);
-
-builder.AddSqlServerDbContext<ApplicationDbContext>("sqldata");
 
 var app = builder.Build();
 
