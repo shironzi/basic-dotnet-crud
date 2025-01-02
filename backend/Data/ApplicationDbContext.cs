@@ -4,8 +4,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace backend.Data
 {
-    public class TodoContext(DbContextOptions<TodoContext> options) : DbContext(options)
+    public class TodoContext : DbContext
     {
+        public TodoContext(DbContextOptions<TodoContext> options) : base(options)
+        {
+        }
         public required DbSet<TodoItem> Todos { get; set; }
 
         public override int SaveChanges()
